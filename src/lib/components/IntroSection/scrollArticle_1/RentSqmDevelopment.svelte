@@ -5,7 +5,6 @@
     let index = $state(0);
     let showChart = $state(false);
     let divSize = $state(100);
-    let animationFinished = $state(false)
 
   // availableSqm is calculated from the sqm price to how much sqm you would get in 2018 or today for the same price of 11.40 €
   const steps = [
