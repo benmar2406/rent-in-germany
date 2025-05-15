@@ -7,7 +7,7 @@
 </script>
 
 <div class="social-housing-container">
-    <h3 class="number-social-housing">Anzahl Sozialwohnungen:<br>{socialHouses.toLocaleString('de-DE')} Mio.</h3>
+    <h3 class="number-social-housing">Anzahl Sozialwohnungen:<br>{socialHouses.toLocaleString('de-DE')}</h3>
     <div class="house-icon-grid">
         {#each houseIcons as house}
             <div class="icon-wrapper" transition:fade={{ duration: 1000 }}>  
@@ -47,20 +47,19 @@
         height: 1.8rem;
     }
 
-    @media screen and (max-width: 1150px) {
+     @media screen and (max-width: 1150px) {
         .house-icon-grid {
             grid-template-columns: repeat(10, 1fr);
         }
     }
-
     
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 760px) {
         .number-social-housing {
             margin-top: 2rem;
         }
 
         .house-icon-grid {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(10, 1fr);
         }
     }
 </style>

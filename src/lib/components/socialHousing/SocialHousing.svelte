@@ -1,6 +1,7 @@
 <script>
     import SocialHousingChart from "./SocialHousingChart.svelte";
     import PopulationChart from "./PopulationChart.svelte";
+    import SocialHousingArticle from "./SocialHousingArticle.svelte";
 
     let socialHouses = $state(2500000);
     let homelessPeople = $state( 330000);
@@ -35,20 +36,39 @@
     <h2>Sozialer Wohnungsbau im Rückgang</h2>
     <div class="button-container">
         {#each buttons as button, index}
-        <button 
-          onclick={() => handleButtonClick(index)}
-          class:selected={index === selectedIndex}
-          >{button.year}
-        </button>
+            <button 
+                onclick={() => handleButtonClick(index)}
+                class:selected={index === selectedIndex}
+                >
+                {button.year}
+            </button>
         {/each}
     </div>
     <div class="grid-layout">
-        <SocialHousingChart {houseIcons} {socialHouses}/>
-        <PopulationChart {homelessPeople} {peopleIconsArray} />
+        <SocialHousingChart 
+            {houseIcons} 
+            {socialHouses}/>
+        <PopulationChart 
+            {homelessPeople} 
+            {peopleIconsArray} />
     </div>
+    <SocialHousingArticle />
 </section>
 
 <style>
+
+    .social-housing-section {
+        background-color: #333333;
+        margin:  auto;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        color: white;
+    }
+
+    .social-housing-section h2 {
+        width: 90%;
+        margin: auto;
+    }
 
     .grid-layout {
         display: grid;
@@ -56,6 +76,7 @@
         width: 85%;
         margin: auto;
         gap: 0.8rem;
+        max-width: 1200px;
     }
 
     .button-container {
@@ -67,10 +88,21 @@
         width: 100%;
   }
 
- @media screen and (max-width: 750px) {
+  .button-container button {
+    font-weight: 600;
+    color: white;
+  }
+
+  .button-container button:hover, button.selected {
+    color: #ca3f2d;
+  }
+
+
+ @media screen and (max-width: 760px) {
     .grid-layout {
-        width: 95%;
-        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
     }
   }
 

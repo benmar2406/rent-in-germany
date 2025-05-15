@@ -8,7 +8,7 @@
 
 <div class="social-housing-container">
     <h3 class="number-social-housing">Obdachlosigkeit:<br>{homelessPeople.toLocaleString('de-DE')} Menschen betroffen</h3>
-    <div class="house-icon-grid">
+    <div class="human-icon-grid">
         {#each peopleIconsArray as person}
             <div class="icon-wrapper" transition:fade={{ duration: 1000 }}>  
                 <HumanIcon />
@@ -28,16 +28,18 @@
         margin: 1.2rem auto;
     }
 
-    .house-icon-grid {
+    .human-icon-grid {
         display: grid;
         grid-template-columns: repeat(15, 1fr);
         gap: 0.2rem;
+        row-gap: 0.5rem;
         align-content:flex-start;
         width: fit-content;
         padding: 0.8rem;
         border: 1px solid #ca3f2d;
-        min-height: 160px;
+        min-height: 170px;
         margin: 0.2rem auto;
+
     }
 
     .icon-wrapper {
@@ -46,7 +48,7 @@
     }
 
     @media screen and (max-width: 1150px) {
-        .house-icon-grid {
+        .human-icon-grid {
             grid-template-columns: repeat(10, 1fr);
         }
 
@@ -60,7 +62,7 @@
             margin-top: 2rem;
         }
 
-        .house-icon-grid {
+        .human-icon-grid {
             grid-template-columns: repeat(5, 1fr);
         }
     }
