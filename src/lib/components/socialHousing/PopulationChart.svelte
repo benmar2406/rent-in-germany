@@ -6,16 +6,20 @@
 
 </script>
 
-<div class="social-housing-container">
+<figure class="social-housing-container">
     <h3 class="number-social-housing">Obdachlosigkeit:<br>{homelessPeople.toLocaleString('de-DE')} Menschen betroffen</h3>
-    <div class="human-icon-grid">
+    <div class="human-icon-grid" role="group" aria-label="Chart, dass die Menge an Obdachlosen für die betreffende Stadt und das ausgewählte Jahr anzeigt.">
         {#each peopleIconsArray as person}
-            <div class="icon-wrapper" transition:fade={{ duration: 1000 }}>  
+            <div 
+                class="icon-wrapper" 
+                transition:fade={{ duration: 1000 }}
+                aria-hidden="true"
+            >  
                 <HumanIcon />
             </div>
         {/each}
     </div>
-</div>
+</figure>
 
 
 <style>   

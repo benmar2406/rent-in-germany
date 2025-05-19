@@ -23,7 +23,7 @@
 </script>
 
 {#if showChart}
-    <div class="sqm-chart-container" in:fade>
+    <figure class="sqm-chart-container" in:fade>
         <p class="qm-2010"> Quadratmeterpreis 2010: {steps[0].pricePerSqm} €</p>
         <div class="sqm-2018">
             <div 
@@ -34,7 +34,7 @@
             </div>
         </div>
         <p class="qm-2010">Frankfurt a.M.</p>
-    </div>
+      </figure>
 {/if}
 
 <style>

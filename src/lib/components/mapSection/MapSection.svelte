@@ -59,9 +59,9 @@
       <div bind:this={elementToObserve}>
         {#if observer && observer.isVisible}  
         <div 
-            in:fade={{ duration: 700 }}>
-            <RentChart {data} />
-          </div> 
+          in:fade={{ duration: 700 }}>
+          <RentChart {data} />
+        </div> 
         {/if}
     </div>     
     </div>

@@ -8,9 +8,12 @@
 
 <div class="social-housing-container">
     <h3 class="number-social-housing">Anzahl Sozialwohnungen:<br>{socialHouses.toLocaleString('de-DE')}</h3>
-    <div class="house-icon-grid">
+    <div class="house-icon-grid" role="group" aria-label="Chart, dass die Menge an Sozialwohnungen für die betreffende Stadt und das ausgewählte Jahr anzeigt.">
         {#each houseIcons as house}
-            <div class="icon-wrapper" transition:fade={{ duration: 1000 }}>  
+            <div 
+                aria-hidden="true"
+                class="icon-wrapper" 
+                transition:fade={{ duration: 1000 }}>  
                 <HouseIcon />
             </div>
         {/each}
