@@ -51,6 +51,8 @@
 
     .income-button:hover, .income-button.selected {
         border-color: #ca3f2d;
+        background-color: white;
+        color: #ca3f2d;
         cursor: pointer;
         transform: translateX(5px);
     }

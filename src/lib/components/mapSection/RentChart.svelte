@@ -84,7 +84,7 @@
 
 <figure class="charts-container" bind:this={chartContainer}>
   <h3 class="sub-titles" id="chart-title">Mieten vs. Löhne</h3>
-  <div class="chart-wrapper">
+  <div class="chart-wrapper" role="group" aria-label="Liniendiagramm, dass die Entwicklung und das Auseinanderklaffen zwischen Löhnen und Mieten zeigt">
     <svg bind:this={svg} width={width} height={height}>
       <g transform={`translate(${marginLeft},${marginTop})`}>
         <!-- Axes -->

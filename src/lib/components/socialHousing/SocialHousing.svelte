@@ -95,6 +95,7 @@
 
   .button-container button:hover, button.selected {
     color: #ca3f2d;
+    background-color: white;
   }
 
 
