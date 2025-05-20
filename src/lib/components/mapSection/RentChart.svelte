@@ -159,8 +159,7 @@
     width: 70%;
     max-width: 500px;
     min-width: 300px;
-    margin: 1.8rem;
-    margin-bottom: 0; 
+    margin: 0.8rem 1.9rem;
   }
 
   .charts-container h3 {

@@ -78,6 +78,10 @@
     min-height: 100vh;
   }
 
+  .article-container-1 {
+    height: 100vh;
+  }
+
   .intro-article {
     width: 90%;
     max-width: 700px;
