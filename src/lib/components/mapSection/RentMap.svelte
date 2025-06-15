@@ -37,6 +37,13 @@
       map.addControl(new mapboxgl.NavigationControl());
     });
 
+    map.on('style.load', function() {
+  map.setPaintProperty('background', 'background-color', 'rgba(0, 0, 0, 0)');
+
+});
+
+
+
     map.on('mousemove', (event) => {
       const plzs = map.queryRenderedFeatures(event.point, {
         layers: ['germany-rent-plz-0-7ubtns']
