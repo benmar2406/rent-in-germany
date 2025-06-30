@@ -57,13 +57,13 @@
   }
 
   .qm-2010 {
-    color: #333333;
-    text-shadow: white 0.2em 0.3em 0.4em;
+    color: var(--dark);
+    text-shadow: var(--bright) 0.2em 0.3em 0.4em;
     padding-bottom: 0.3rem;
   }
   
   .sqm-2018 {
-    border: solid 1px #333333;
+    border: solid 1px var(--dark);
     border-radius: 5%;
     text-align: center;
     width: 300px;

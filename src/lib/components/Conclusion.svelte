@@ -37,7 +37,7 @@
     transform: translate(-50%, -50%);
     font-family: "Poppins";
     font-weight: 700;
-    color: white;
+    color: var(--bright);
   }
 
   .background-image-3 {
@@ -60,7 +60,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333333;
+    background-color: var(--dark);
     z-index: 1;
   }
 </style>

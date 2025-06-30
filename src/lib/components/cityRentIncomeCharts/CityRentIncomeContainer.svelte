@@ -70,8 +70,8 @@
 <style>
     .chart-container{
         padding: 5rem;
-        background-color: #333333;
-        color: white;
+        background-color: var(--dark);
+        color: var(--beige);
         margin: 0 auto;
     }
 </style>

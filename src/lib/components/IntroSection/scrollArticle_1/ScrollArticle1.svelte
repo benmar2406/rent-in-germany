@@ -68,12 +68,12 @@
   :global(.main-title) {
     text-align: center;
     margin: 2rem auto;
-    color: #ca3f2d;
+    color: var(--main);
   }
 
   :global(.main-title span) {
     font-family: 'Newsreader', serif;
-    color: black;
+    color: var(--dark);
     font-style: italic;
   }
 
@@ -105,8 +105,8 @@
 
   .step-content {
     font-size: 1rem;
-    background: whitesmoke;
-    color: #ccc;
+    background: var(--bright);
+    color:var(--bright);
     border-radius: 5px;
     padding: 1.4rem;
     display: flex;
@@ -126,7 +126,6 @@
   }
 
 	.step.active .step-content {
-		background: white;
 		color: black;
 	}
 	

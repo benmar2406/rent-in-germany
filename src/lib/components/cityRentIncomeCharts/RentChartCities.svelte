@@ -109,19 +109,19 @@
 <style>
 
   .chart {
-    color: white;
-    fill: white;
+    color: var(--bright);
+    fill: var(--bright);
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .x-axis .tick text {
     text-anchor: middle;
-    color: black;
+    color: var(--dark);
   }
 
   .bars rect {
-    fill: #ca3f2d;
+    fill: var(--main);
     stroke: none;
   }
 
@@ -136,7 +136,7 @@
   }
 
   .tick line {
-    stroke: #2db8ca;
+    stroke: var(--mainScnd);
     stroke-dasharray: 2;
     opacity: 1;
   }
@@ -169,7 +169,7 @@
   }
 
   button {
-    color: white;
+    color: var(--bright);
   }
 
   @media screen and (max-width: 1200px) {

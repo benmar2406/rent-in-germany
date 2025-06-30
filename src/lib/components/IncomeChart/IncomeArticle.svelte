@@ -21,7 +21,13 @@
         grid-template-columns: repeat(3, 1fr); 
         gap: 1.7rem;
         margin: 4rem auto;
+       
     }
+
+    .income-article p {
+        color: white;
+    }
+
 
     @media screen and (min-width: 768px) and (max-width: 1200px) {
         .income-article {

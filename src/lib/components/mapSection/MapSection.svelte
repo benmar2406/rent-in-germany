@@ -79,7 +79,7 @@
   }
 
   .article-container-1 {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .intro-article {

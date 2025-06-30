@@ -65,7 +65,7 @@
 
   .step-content {
     font-size: 1rem;
-    background: whitesmoke;
+    background: var(--bright);
     color: #ccc;
     border-radius: 5px;
     padding: 1rem;
@@ -81,8 +81,7 @@
   }
 
 	.step.active .step-content {
-		background: white;
-		color: black;
+		color: var(--dark);
 	}
 	
   .steps-container {

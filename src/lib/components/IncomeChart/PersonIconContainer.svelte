@@ -14,7 +14,7 @@
 </script>
 
 <div class="household-container">
-    <p class="sub-titles class" id="haushaltsgroesse-title">Wähle die Haushaltsgröße aus:</p>
+    <p class="sub-titles" id="haushaltsgroesse-title">Wähle die Haushaltsgröße aus:</p>
     <div class="person-icons-grid">
         {#each iconsArray as icon, index}
             <div class="icon-container-wrapper">
@@ -40,6 +40,10 @@
         height: fit-content;
         width: 100%;
     }
+
+    .haushaltsgroesse-title {
+        
+    }
     
     .person-icons-grid {
         display: flex;
@@ -48,7 +52,7 @@
         gap: 0.2rem;
         width: 100%;
         height: fit-content;
-        margin-top: 1rem auto;
+        margin-top: 0.6rem;
         margin: auto;
     }
 
@@ -60,7 +64,7 @@
     .icon-container {
         width: 3.5rem;
         height: 3.5rem;
-        border: 3px solid white;
+        border: 3px solid var(--bright);
         background-color: transparent;
         border-radius: 50%;
         padding: 0.4rem;
@@ -72,7 +76,7 @@
     }
 
     .icon-container:hover, .icon-container.selected {
-        border-color: #ca3f2d;
+        border-color: var(--main);
         cursor: pointer;
     }
 

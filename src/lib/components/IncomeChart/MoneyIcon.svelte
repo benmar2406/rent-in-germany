@@ -25,19 +25,19 @@
     }
 
     circle {
-        fill: white;
+        fill: var(--bright);
         stroke: none;
         transition: fill 0.3s ease;
     }
 
     circle.colored {
-        fill: #ca3f2d;
+        fill: var(--main);
     }
 
     .symbol {
-        fill: #333333;
+        fill: var(--dark);
         font-size: 14px;
-        font-weight: bold;
-        font-family: Arial, sans-serif;
+        font-weight: 600;
+        font-family: "Poppins";
     }
 </style> 

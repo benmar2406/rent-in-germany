@@ -58,11 +58,11 @@
 <style>
 
     .social-housing-section {
-        background-color: #333333;
+        background-color: var(--dark);
         margin:  auto;
         padding-top: 2rem;
         padding-bottom: 4rem;
-        color: white;
+        color: var(--bright);
     }
 
     .social-housing-section h2 {
@@ -90,13 +90,7 @@
 
   .button-container button {
     font-weight: 600;
-    color: white;
-  }
-
-  .button-container button:hover, button.selected {
-    color: #ca3f2d;
-    background-color: white;
-  }
+}
 
 
  @media screen and (max-width: 760px) {

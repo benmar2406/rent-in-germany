@@ -38,7 +38,7 @@
         width: fit-content;
         align-content:flex-start;
         padding: 0.8rem;
-        border: 1px solid #ca3f2d;
+        border: 1px solid var(--main);
         margin: auto;
     }
 
@@ -57,7 +57,7 @@
     }
 
     .high {
-        color: #ca3f2d;
+        color: var(--main);
     }
 
 

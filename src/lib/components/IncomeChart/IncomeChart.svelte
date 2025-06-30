@@ -115,9 +115,9 @@
 
     .einkommen {
         z-index: 1;
-        background-color: #333333;
+        background-color: var(--dark);
         margin: 0 auto;
-        color: white;
+        color: var(--bright);
         padding-bottom: 0.5rem;
     }
 
@@ -146,7 +146,7 @@
     } 
 
     .separator {
-        border-right: 1px solid #ccc;
+        border-right: 1px solid var(--bright);
     }
 
     .controls-container {
