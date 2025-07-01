@@ -40,10 +40,6 @@
         height: fit-content;
         width: 100%;
     }
-
-    .haushaltsgroesse-title {
-        
-    }
     
     .person-icons-grid {
         display: flex;
