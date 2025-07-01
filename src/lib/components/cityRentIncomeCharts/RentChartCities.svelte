@@ -105,7 +105,9 @@
     </g>
   </svg>
   <p class="source">
-    
+    <a href="https://www.wohnungsboerse.net/mietspiegel-mietpreise" target="_blank">
+      Quelle: Wohnungsbörse – Mietspiegel
+    </a>
   </p>
 </figure>
 
@@ -173,6 +175,14 @@
 
   button {
     color: var(--bright);
+  }
+
+  .source {
+    margin-top: 2rem;
+  }
+
+  a {
+    color: var(--bright)
   }
 
   @media screen and (max-width: 1200px) {
