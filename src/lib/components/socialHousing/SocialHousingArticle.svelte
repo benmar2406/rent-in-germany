@@ -3,9 +3,9 @@
         <p>In Deutschland ist die Anzahl der Sozialwohnungen in den letzten Jahrzehnten kontinuierlich gesunken. Nach der Wiedervereinigung gab es noch etwa 2,9 Millionen Sozialwohnungen, doch bis heute hat sich diese Zahl mehr als halbiert.</p>
     </div>
     <div>
-        <p>Besonders in Großstädten ist der Rückgang spürbar, was zu einer zunehmenden Belastung für Haushalte mit niedrigem Einkommen führt.</p>
+        <p>Besonders in Großstädten ist der Rückgang spürbar, was zu einer zunehmenden Belastung für Haushalte mit niedrigem Einkommen führt. Dadurch gibt es trotz Neubaktivitäten einen Mangel an bezahlbaren Wohnungen.</p>
     </div>
-    <p>Dadurch gibt es trotz Neubaktivitäten einen Mangel an bezahlbaren Wohnungen. In der Vergangenheit führten auch Boomphasen auf dem Wohnungsmarkt nicht zu einer Entspannung.</p>
+        <p>In der Vergangenheit führten auch Boomphasen auf dem Wohnungsmarkt nicht zu einer Entspannung.</p>
     <div>
     </div>
 </article>
