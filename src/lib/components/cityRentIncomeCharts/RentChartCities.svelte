@@ -118,6 +118,7 @@
     fill: var(--bright);
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
   }
 
   .x-axis .tick text {
@@ -173,23 +174,32 @@
     margin: 2rem;
   }
 
-  button {
+  .chart {
     color: var(--bright);
+    fill: var(--bright);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .source {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   a {
     color: var(--bright)
   }
 
-  @media screen and (max-width: 1200px) {
-        
-  .chart-description {
-    font-size: 0.5rem;
-  }
+  @media screen and (max-width: 1200px) {     
+    .chart-description {
+      font-size: 0.5rem;
+    }
+  
+   @media screen and (max-width: 600px) {  
+
+        .chart {
+            width: 85%;
+        }
+    }  
 }
 
 

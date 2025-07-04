@@ -6,13 +6,17 @@
     let socialHouses = $state(2500000);
     let homelessPeople = $state( 330000);
     let selectedIndex = $state(0);
+	let factorHouses = $state(10000);
+    let factorHomeless = $state(10000);
+    let displayHouse = true;
+    
 
-    let totalIcons = $derived(socialHouses / 10000) // 2.5 million social houses / appartments
+    let totalIcons = $derived(socialHouses / factorHouses) 
     let houseIcons = $derived(Array.from({ length: totalIcons }, (_, index) => ({
         index
     })));
 
-    let totalIconsPeople = $derived(homelessPeople / 10000) 
+    let totalIconsPeople = $derived(homelessPeople / factorHomeless) 
     let peopleIconsArray = $derived(Array.from({ length: totalIconsPeople }, (_, index) => ({
         index
     })));
@@ -47,10 +51,14 @@
     <div class="grid-layout">
         <SocialHousingChart 
             {houseIcons} 
-            {socialHouses}/>
+            {socialHouses}
+            {factorHouses}
+        />
         <PopulationChart 
             {homelessPeople} 
-            {peopleIconsArray} />
+            {peopleIconsArray} 
+            {factorHomeless}
+        />
     </div>
     <SocialHousingArticle />
 </section>

@@ -1,13 +1,16 @@
 <script>
+import { fade } from 'svelte/transition'
+import Figcaption from './Figcaption.svelte';
 import HumanIcon from './HumanIcon.svelte';
-import {
-    fade
-} from 'svelte/transition';
 
 let {
     homelessPeople,
-    peopleIconsArray
+    peopleIconsArray,
+    factorHomeless,
 } = $props();
+
+let displayHuman = true;
+
 </script>
 
 <figure class="social-housing-container">
@@ -23,6 +26,7 @@ let {
         </div>
         {/each}
     </div>
+    <Figcaption {displayHuman} {factorHomeless} />
 </figure>
 
 <style>

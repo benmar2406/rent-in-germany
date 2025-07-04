@@ -1,16 +1,18 @@
 <script>
 import HouseIcon from "./HouseIcon.svelte";
+import Figcaption from "./Figcaption.svelte";
 import {
     fade
 } from 'svelte/transition';
 
 let {
     houseIcons,
-    socialHouses
+    socialHouses,
+    factorHouses
 } = $props();
 </script>
 
-<div class="social-housing-container">
+<figure class="social-housing-container">
     <h3 class="number-social-housing">Anzahl Sozialwohnungen:<br>{socialHouses.toLocaleString('de-DE')}</h3>
     <div class="house-icon-grid" role="group" aria-label="Chart, dass die Menge an Sozialwohnungen für die betreffende Stadt und das ausgewählte Jahr anzeigt.">
         {#each houseIcons as house}
@@ -22,7 +24,8 @@ let {
         </div>
         {/each}
     </div>
-</div>
+    <Figcaption {factorHouses} />
+</figure>
 
 <style>
    .social-housing-container {

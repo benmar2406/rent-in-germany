@@ -74,5 +74,12 @@
         color: var(--beige);
         margin: 0 auto;
     }
+
+     @media screen and (max-width: 600px) {  
+
+        .chart-container {
+            padding: 4rem 0;
+        }
+    }
 </style>
 
