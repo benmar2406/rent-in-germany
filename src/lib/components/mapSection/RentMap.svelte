@@ -8,9 +8,16 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 let map;
 let popup;
 
-let isLoading = true;
+let isLoading = $state(true);
+let loadingInfo = $state("Karte läd...")
+
+
 
 onMount(() => {
+
+    setTimeout(() => {
+        isLoading === true ? loadingInfo = "Karte konnte nicht geladen werden." : ""
+    }, 6000)
 
     // Initialize Mapbox
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubWFyYmUiLCJhIjoiY204ZGdqbmk2MjIxcjJrczd5cjhnOWc5ZiJ9.aNWSLi175awDsnHX7mZIlQ';
@@ -79,14 +86,14 @@ onMount(() => {
 });
 </script>
 <figure id="map">
-    {#if isLoading} <div class="loading-screen"><p>Karte läd...<p></div>{/if}
+    {#if isLoading} <div class="loading-screen"><p>{loadingInfo}<p></div>{/if}
         </figure>
 
 <style>
 #map {
     width: 100%;
     min-height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     top: 0;
 }
 
@@ -99,10 +106,11 @@ onMount(() => {
 }
 
 .loading-screen p {
-    font-size: 3rem;
+    font-size: 1.2rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    line-height: 2.3rem;
 }
 
 /* These are Mapbox's elements, so they need :global() */
@@ -156,7 +164,7 @@ onMount(() => {
 :global(#rent-price) {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
     padding: 0;
 

@@ -10,6 +10,7 @@ let {
 } = $props();
 
 let displayHuman = true;
+const legendText = "Obdachlose Menschen";
 
 </script>
 
@@ -26,7 +27,10 @@ let displayHuman = true;
         </div>
         {/each}
     </div>
-    <Figcaption {displayHuman} {factorHomeless} />
+    <Figcaption 
+        {displayHuman} 
+        factor={factorHomeless} 
+        text={legendText} />
 </figure>
 
 <style>

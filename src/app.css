@@ -129,6 +129,10 @@ text {
   color: grey;
 }
 
+.source a {
+  color: grey;
+}
+
 /* Responsive Typography */
 @media screen and (max-width: 768px) {
   h1 {

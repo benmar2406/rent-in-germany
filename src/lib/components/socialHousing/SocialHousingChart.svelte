@@ -10,6 +10,9 @@ let {
     socialHouses,
     factorHouses
 } = $props();
+
+const legendText = "Sozialwohnungen";
+
 </script>
 
 <figure class="social-housing-container">
@@ -24,7 +27,7 @@ let {
         </div>
         {/each}
     </div>
-    <Figcaption {factorHouses} />
+    <Figcaption factor={factorHouses} text={legendText} />
 </figure>
 
 <style>
