@@ -30,7 +30,9 @@ const legendText = "Obdachlose Menschen";
     <Figcaption 
         {displayHuman} 
         factor={factorHomeless} 
-        text={legendText} />
+        text={legendText} 
+        IconComponent={HumanIcon}
+    />
 </figure>
 
 <style>

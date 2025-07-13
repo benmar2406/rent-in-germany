@@ -1,9 +1,7 @@
 <script>
 import HouseIcon from "./HouseIcon.svelte";
 import Figcaption from "./Figcaption.svelte";
-import {
-    fade
-} from 'svelte/transition';
+import { fade } from 'svelte/transition';
 
 let {
     houseIcons,
@@ -27,7 +25,11 @@ const legendText = "Sozialwohnungen";
         </div>
         {/each}
     </div>
-    <Figcaption factor={factorHouses} text={legendText} />
+    <Figcaption 
+        factor={factorHouses} 
+        text={legendText} 
+        IconComponent={HouseIcon}
+    />
 </figure>
 
 <style>

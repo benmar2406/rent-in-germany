@@ -5,10 +5,12 @@
     let { 
         factor, 
         displayHuman, 
-        text } 
+        text,
+        IconComponent
+    } 
     = $props();
 
-    const IconComponent = displayHuman ? HumanIcon : HouseIcon;
+    //const IconComponent = displayHuman ? HumanIcon : HouseIcon;
 </script>
 
 <figcaption>
