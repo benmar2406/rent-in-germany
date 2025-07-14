@@ -1,4 +1,7 @@
 <script>
+    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
+    import { useVisibilityObserver } from '$lib/customHooks/useVisibilityObserver.svelte';
     import SocialHousingChart from "./SocialHousingChart.svelte";
     import PopulationChart from "./PopulationChart.svelte";
     import SocialHousingArticle from "./SocialHousingArticle.svelte";
@@ -9,7 +12,14 @@
 	let factorHouses = $state(10000);
     let factorHomeless = $state(10000);
     let displayHouse = true;
+    let observer = $state();
+    let elementToObserve = $state(); 
+
     
+    onMount(() => {
+        observer = useVisibilityObserver(elementToObserve);   
+    });
+
 
     let totalIcons = $derived(socialHouses / factorHouses) 
     let houseIcons = $derived(Array.from({ length: totalIcons }, (_, index) => ({
@@ -48,19 +58,29 @@
             </button>
         {/each}
     </div>
-    <div class="grid-layout">
-        <SocialHousingChart 
-            {houseIcons} 
-            {socialHouses}
-            {factorHouses}
-        />
-        <PopulationChart 
-            {homelessPeople} 
-            {peopleIconsArray} 
-            {factorHomeless}
-        />
+    <div class="grid-layout" bind:this={elementToObserve}>
+        {#if observer && observer.isVisible}
+            <div in:fly={{ x: -200, duration: 2000, delay: 2000 }}>
+                <SocialHousingChart 
+                    {houseIcons} 
+                    {socialHouses}
+                    {factorHouses}
+                />
+            </div>
+        {/if}
+        {#if observer && observer.isVisible}
+            <div in:fly={{ x: 200, duration: 2000, delay: 2000 }}>
+                <PopulationChart 
+                    {homelessPeople} 
+                    {peopleIconsArray} 
+                    {factorHomeless}
+                />
+            </div>
+
+        {/if}
     </div>
     <SocialHousingArticle />
+
 </section>
 
 <style>

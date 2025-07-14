@@ -44,6 +44,7 @@ const steps = [
     background-image: url('/images/citystreet.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     z-index: -1;
 }
 
