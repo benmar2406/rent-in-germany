@@ -6,7 +6,17 @@
 
   let observer = $state();
   let elementToObserve;
-  let { data, sortAlphabetically, sortDescending, sortAscending, triggerAnimation, buttons, smallScreen, selectedIndex, animationKey } = $props()
+  let { 
+        data, 
+        sortAlphabetically, 
+        sortDescending, 
+        sortAscending, 
+        triggerAnimation, 
+        buttons, 
+        smallScreen, 
+        selectedIndex, 
+        animationKey 
+      } = $props()
 
 
   onMount(() => {
