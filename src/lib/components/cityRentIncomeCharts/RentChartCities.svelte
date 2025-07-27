@@ -59,7 +59,7 @@
           {#if (observer && observer.isVisible)}
             <rect
               transition:fade|global={{ delay: 300 * i, duration: 500 }}
-              x={xScale(i) + 2}
+              x={xScale(i)}
               y={yScale(city.rentSqm)}
               width={barWidth * 0.9}
               height={yScale(0) - yScale(city.rentSqm)} />
