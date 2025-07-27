@@ -24,7 +24,7 @@
 
 {#if showChart}
     <figure class="sqm-chart-container" in:fade>
-        <p class="qm-2010"> Quadratmeterpreis 2010: {steps[0].pricePerSqm} €</p>
+        <p class="qm-2010"> Quadratmeterpreis 2010: {steps[0].pricePerSqm.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}</p>
         <div class="sqm-2018">
             <div 
                 class="sqm-chart"
