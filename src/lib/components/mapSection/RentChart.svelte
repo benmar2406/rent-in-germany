@@ -105,7 +105,7 @@
             const closest = data.reduce((a, b) =>
               Math.abs(b.Jahr - xVal) < Math.abs(a.Jahr - xVal) ? b : a
             );
-            showTooltip(e, `Jahr: ${closest.Jahr}<br/>Mietpreisindex: ${closest.Mietpreisindex}`);
+            showTooltip(e, `Jahr: ${closest.Jahr}<br/>Mietpreisindex: ${closest.Mietpreisindex.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`);
           }}
           on:mouseout={hideTooltip}
           on:blur={hideTooltip}
