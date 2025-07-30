@@ -83,7 +83,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('/images/skyscrapers.jpg'); 
+    background-image: url('/images/skyscrapers.webp'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
