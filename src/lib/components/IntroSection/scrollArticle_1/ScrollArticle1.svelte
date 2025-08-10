@@ -3,10 +3,11 @@
 	Scrollytelling component from Russell Goldenberg https://twitter.com/codenberg/status/1432774653139984387 */
 	
   import { onMount } from 'svelte';
+  import { scrollY } from 'svelte/reactivity/window';
   import Scrolly from "./Scrolly.svelte";
   import RentSqmDevelopment from "./RentSqmDevelopment.svelte";
   	
-  let value = $state(0);
+  let value = $state(1);
   let hideStep = $state(false);
   let targetElement;
   let scrollProgress = $state(0);
@@ -38,9 +39,10 @@
 </script>
 <section class="scroll-section">
   <div class="background-image-1">
-      <RentSqmDevelopment 
-        stepIndex={value}/>
-    </div>
+    <RentSqmDevelopment 
+      stepIndex={value}
+    />
+  </div>
   
     <div bind:this={targetElement} class="section-container">
       <div class="steps-container">
