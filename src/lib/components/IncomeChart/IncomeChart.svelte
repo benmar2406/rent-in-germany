@@ -10,15 +10,16 @@
 
     let observer = $state();
     let elementToObserve;
-    let percentage = $state(0);
-    let displayPercentage = $state("");
-    let selectedHousehold = $state(0);
-    let selectedIncome = $state(0);
-    let displayIncome = $state("");
 
+    //static chart details
+    const onePerson = `${base}/images/income-chart/one.png`;
+    const twoPersons = `${base}/images/income-chart/two.png`;
+    const threePersons = `${base}/images/income-chart/three.png`;
+    const fourPersons = `${base}/images/income-chart/four.png`;
+
+    const householdSizes = ["onePerson", "twoPersons", "threePersons", "fourPersons"];
+    const iconsArray = [[onePerson, "Eine Person"], [twoPersons, "Zwei Personen"], [threePersons, "Drei Personen"], [fourPersons, "ab 4 Personen"]];
     const totalIcons = 100;
-    const coloredIcons = $derived(Math.round(totalIcons * (percentage / 100)));
-    
     const data = {
         "onePerson": {
             "rentPercentage": [44, 28, 23, 20, 16],
@@ -38,39 +39,34 @@
         }
     };
 
-    const householdSizes = ["onePerson", "twoPersons", "threePersons", "fourPersons"];
 
-    const onePerson = `${base}/images/income-chart/one.png`;
-    const twoPersons = `${base}/images/income-chart/two.png`;
-    const threePersons = `${base}/images/income-chart/three.png`;
-    const fourPersons = `${base}/images/income-chart/four.png`;
+    //dynamic chart details
+    let selectedHousehold = $state(0);
+    let selectedIncome = $state(2);
+    let household = $derived(householdSizes[selectedHousehold]);
+    let displayIncome = $derived(data[householdSizes[selectedHousehold]].incomeLevels[selectedIncome]);
+    let percentage = $derived(data[household].rentPercentage[selectedIncome]);
+    const coloredIcons = $derived(Math.round(totalIcons * (percentage / 100)));
+    let displayPercentage = $derived(percentage.toFixed(0).replace('.', ','));
 
-    const iconsArray = [[onePerson, "Eine Person"], [twoPersons, "Zwei Personen"], [threePersons, "Drei Personen"], [fourPersons, "ab 4 Personen"]];
 
-
+    
     const handleIconClick = (index) => {
         selectedHousehold = index;
-        updatePercentage();
     }
 
     const handleIncomeClick = (index) => {
         selectedIncome = index;
-        displayIncome = data[householdSizes[selectedHousehold]].incomeLevels[selectedIncome];
-        updatePercentage();
     }
 
     const updatePercentage = () => {
-        const household = householdSizes[selectedHousehold];
+        household = householdSizes[selectedHousehold];
         percentage = data[household].rentPercentage[selectedIncome];
         displayPercentage = percentage.toFixed(0).replace('.', ',');
     }
 
     onMount(() => {
         observer = useVisibilityObserver(elementToObserve);
-        selectedHousehold = 0; 
-        selectedIncome = 2; 
-        displayIncome = data[householdSizes[selectedHousehold]].incomeLevels[selectedIncome];
-        updatePercentage();    
     });
 
 </script>
@@ -97,7 +93,7 @@
                 in:fly={{ y: 200, duration: 2000, delay: 1000 }}>
                 <MoneyIconContainer 
                     {coloredIcons} 
-                    {displayPercentage} 
+                    displayPercentage = {percentage.toFixed(0).replace('.', ',')} 
                     {displayIncome} 
                     {percentage}
                 />
