@@ -46,7 +46,7 @@
     let household = $derived(householdSizes[selectedHousehold]);
     let displayIncome = $derived(data[householdSizes[selectedHousehold]].incomeLevels[selectedIncome]);
     let percentage = $derived(data[household].rentPercentage[selectedIncome]);
-    const coloredIcons = $derived(Math.round(totalIcons * (percentage / 100)));
+    let coloredIcons = $derived(Math.round(totalIcons * (percentage / 100)));
     let displayPercentage = $derived(percentage.toFixed(0).replace('.', ','));
 
 
@@ -57,12 +57,6 @@
 
     const handleIncomeClick = (index) => {
         selectedIncome = index;
-    }
-
-    const updatePercentage = () => {
-        household = householdSizes[selectedHousehold];
-        percentage = data[household].rentPercentage[selectedIncome];
-        displayPercentage = percentage.toFixed(0).replace('.', ',');
     }
 
     onMount(() => {
@@ -93,7 +87,7 @@
                 in:fly={{ y: 200, duration: 2000, delay: 1000 }}>
                 <MoneyIconContainer 
                     {coloredIcons} 
-                    displayPercentage = {percentage.toFixed(0).replace('.', ',')} 
+                    {displayPercentage}
                     {displayIncome} 
                     {percentage}
                 />
