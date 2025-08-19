@@ -50,7 +50,6 @@
     let displayPercentage = $derived(percentage.toFixed(0).replace('.', ','));
 
 
-    
     const handleIconClick = (index) => {
         selectedHousehold = index;
     }

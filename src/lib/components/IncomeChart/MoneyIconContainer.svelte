@@ -1,13 +1,12 @@
 <script>
     import MoneyIcon from './MoneyIcon.svelte';
-    export let coloredIcons = 0;
-    export let percentage = 0;
-    export let displayPercentage = "";
     const totalIcons = 100;
 
-    $: moneyIcons = Array(totalIcons).fill(null).map((_, index) => ({
+    let { percentage, displayPercentage, coloredIcons } = $props();
+
+    let moneyIcons = $derived(Array(totalIcons).fill(null).map((_, index) => ({
         isColored: index < coloredIcons
-    }));
+    })));
 </script>
 
 <figure class="chart-article-container-2" aria-labelledby="income-title" aria-describedby="income-description">
