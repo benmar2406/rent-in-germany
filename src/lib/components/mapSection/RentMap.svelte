@@ -95,6 +95,7 @@ onMount(() => {
     min-height: 100vh;
     height: 100%;
     top: 0;
+    overflow: hidden;
 }
 
 .loading-screen {
