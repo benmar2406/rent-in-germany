@@ -91,11 +91,11 @@
         padding-top: 2rem;
         padding-bottom: 4rem;
         color: var(--bright);
-    }
 
-    .social-housing-section h2 {
-        width: 90%;
-        margin: auto;
+        & h2 {
+            width: 90%;
+            margin: auto;
+        }
     }
 
     .grid-layout {
@@ -116,22 +116,22 @@
         width: 100%;
   }
 
-  .button-container button {
-    font-weight: 600;
-}
-
-
- @media screen and (max-width: 760px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
+    .button-container button {
+        font-weight: 600;
     }
-  }
 
-  @media screen and (max-width: 1150px) {
-    .grid-layout {
-        width: 95%;
+
+    @media screen and (max-width: 760px) {
+        .grid-layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100%;
+        }
     }
-  }
+
+    @media screen and (max-width: 1150px) {
+        .grid-layout {
+            width: 95%;
+        }
+    }
 </style>

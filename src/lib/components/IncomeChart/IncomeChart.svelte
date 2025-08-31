@@ -125,14 +125,14 @@
         grid-template-columns: repeat(3, 1fr); 
         gap: 0.8rem;
         margin: 4rem auto;
-    }
 
-    .income-chart-container > div {
-        flex-basis: 33%;
-        min-width: 350px; 
-        margin: 0.3rem;
-        padding: 0.5rem;
-    } 
+        & div {
+            flex-basis: 33%;
+            min-width: 350px; 
+            margin: 0.3rem;
+            padding: 0.5rem;
+        }
+    }
 
     .separator {
         border-right: 1px solid var(--bright);
@@ -151,10 +151,10 @@
         .income-chart-container {
             grid-template-columns: repeat(2, 1fr); /* 2 Spalten für Mobile */
             grid-template-rows: auto auto; /* Zwei Reihen */
-        }
 
-        .income-chart-container > div {
-            grid-column: 1 / -1; 
+            & div {
+                grid-column: 1 / -1; 
+            }
         }
 
         .einkommen {
